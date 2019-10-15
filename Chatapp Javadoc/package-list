@@ -1,0 +1,8 @@
+com.example.chatroom
+com.example.chatroom.Database
+com.example.chatroom.Users
+com.example.chatroom.Users.Chat
+com.example.chatroom.Users.Profile
+com.example.chatroom.Users.individual_chat
+com.example.chatroom.Users.model
+com.example.chatroom.WebServices
