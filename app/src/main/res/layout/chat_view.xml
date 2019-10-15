@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipToPadding="false"
+    android:id="@+id/chatview_rv"
+    android:focusableInTouchMode="true"
+    tools:context="com.example.chatroom.Chat">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/blue"
+        >
+        <ImageButton
+            android:id="@+id/backarw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back_white_24dp"
+            android:background="@color/blue"/>
+        <ImageView
+            android:id="@+id/dp_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/dpcircle_backround"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/person_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/white"
+                />
+            <TextView
+                android:id="@+id/typingstatus"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+    <ListView
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/sendlinear"
+        android:layout_width="match_parent"
+        android:id="@+id/messages_view"
+        android:layout_weight="2"
+        android:divider="#fff"
+        android:layout_height="match_parent"
+        android:layout_alignBaseline="@id/sendlinear"
+        />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/sendlinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:layout_alignParentEnd="true">
+
+    <lib.ar.arvind.drawableclicklistener.DrawableEditText
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/edittext_border"
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_weight="2"
+        android:ems="10"
+        android:hint="Start typing"
+        android:inputType="textMultiLine"
+        android:paddingHorizontal="10dp"
+        android:layout_marginLeft="10dp"
+        android:text=""
+        android:drawableEnd="@drawable/ic_attach_file_black_24dp"/>
+
+
+        <ImageButton
+            android:id="@+id/imgsend"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:padding="20dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/circle_lightblue"
+            android:src="@drawable/ic_send_white_24dp"/>
+    </LinearLayout>
+
+    <include layout="@layout/attachment_layout"/>
+</RelativeLayout>

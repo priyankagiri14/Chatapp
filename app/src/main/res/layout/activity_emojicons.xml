@@ -1,0 +1,13 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_emojicons"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Users.individual_chat.EmojiIconsActivity">
+
+    <io.github.rockerhieu.emojicon.EmojiconsView
+        android:id="@+id/emojicons_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

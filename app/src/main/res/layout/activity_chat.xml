@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/rl"
+    xmlns:chatview="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    tools:context=".Chat">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/blue"
+        >
+        <ImageView
+            android:id="@+id/dp_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/dpcircle_backround"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/person_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/typingstatus"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/white"/>
+        </LinearLayout>
+
+</androidx.appcompat.widget.Toolbar>
+<LinearLayout
+    android:id="@+id/linearChat"
+    android:clickable="true"
+    android:layout_below="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true">
+    <co.intentservice.chatui.ChatView
+        android:layout_below="@id/toolbar"
+        android:id="@+id/chat_view"
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:imeOptions="actionNext"
+        chatview:bubbleBackgroundRcv="@color/blue"
+        chatview:bubbleBackgroundSend="@color/bubble_color_send"
+        chatview:inputTextColor="@color/black"
+        app:bubbleElevation="elevated"
+        app:sendBtnBackgroundTint="@color/blue"
+        app:inputBackgroundColor="@color/inputetxt"
+        app:inputUseEditorAction="true"
+
+        >
+    <requestFocus/>
+    </co.intentservice.chatui.ChatView>
+</LinearLayout>
+    <!-- Insert customisation options here -->
+    <ImageButton
+        android:id="@+id/imgUpload"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/attach_ic" />
+
+        <include layout="@layout/attachment_layout"/>
+
+
+</RelativeLayout>

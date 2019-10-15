@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Users.individual_chat.Individual_chat"
+    android:background="#D5E9E9DC">
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:background="@color/darkgreen">
+    <ImageView
+        android:id="@+id/dp_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/dpcircle_backround"
+        android:src="@drawable/ic_account_circle_grey_24dp"/>
+    <TextView
+        android:id="@+id/person_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/white"
+        android:text="Priyanka"/>
+</androidx.appcompat.widget.Toolbar>
+
+    <ListView
+        android:id="@+id/sentmsglist"
+        android:layout_below="@id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@id/sentlinear">
+
+    </ListView>
+    <LinearLayout
+        android:id="@+id/sentlinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp" >
+
+<com.mindorks.editdrawabletext.EditDrawableText
+    android:id="@+id/typemsg"
+    android:padding="10dp"
+    android:layout_weight="9"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="20dp"
+    android:hint="Type a message"
+    android:drawableLeft="@drawable/ic_insert_emoticon_black_24dp"
+    android:drawableRight="@drawable/ic_photo_camera_black_24dp"
+    android:background="@drawable/message_edittext_layout"
+    android:inputType="text"
+    android:drawablePadding="10dp"
+    />
+    <!--<EditText
+        android:id="@+id/typemsg"
+        android:layout_weight="9"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:hint="Type a message"
+        android:background="@drawable/message_edittext_layout"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/ic_insert_emoticon_black_24dp"
+        android:drawableLeft="@drawable/ic_insert_emoticon_black_24dp" />
+    -->    <ImageButton
+            android:id="@+id/send"
+            android:layout_weight="1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/circle_orange"
+            android:src="@drawable/ic_send_white_24dp"
+            />
+    </LinearLayout>
+</RelativeLayout>

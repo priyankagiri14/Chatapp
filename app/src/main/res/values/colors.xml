@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="darkgreen">#00574B</color>
+    <color name="lightgreen">#17B419</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="orange">#FB8C00</color>
+    <color name="lightorange">#FFB300</color>
+    <color name="blue">#2CC8FA</color>
+    <color name="darkblue">#5252CD</color>
+    <color name="black">#000</color>
+    <color name="white">#ffff</color>
+    <color name="grey">#D6CECE</color>
+    <color name="inputetxt">#EBEAEA</color>
+    <color name="chatbg">#D5DEE7E3</color>
+    <color name="bubble_color_rcv">#EBF0F0</color>
+    <color name="bubble_color_send">#F2F1F0</color>
+    <color name="transparent">#000000FF</color>
+</resources>
